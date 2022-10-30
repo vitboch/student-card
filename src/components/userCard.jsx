@@ -7,9 +7,14 @@ const UserCard = ({ firstName, lastName, yearBirth, portfolio }) => {
     const lastOne = Number(age.toString().slice(-1));
     let text = "";
 
-    if (lastOne === 1) {
+    if (lastOne === 1 && age !== 11) {
         text = "год";
-    } else if ([2, 3, 4].indexOf(lastOne) >= 0) {
+    } else if (
+        [2, 3, 4].indexOf(lastOne) >= 0 &&
+        age !== 12 &&
+        age !== 13 &&
+        age !== 14
+    ) {
         text = "года";
     } else text = "лет";
 
